@@ -19,36 +19,44 @@ public class ListNode {
 
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode dummy = new ListNode();
-        ListNode tail = new ListNode();
-
-        while (true) {
-            if (list1 == null) {
-                tail.next = list2;
-                break;
-            } else if (list2 == null) {
-                tail.next = list1;
-                break;
-            }
-            if (list1.val <= list2.val) {
-                if (list1 != null) {
-                    ListNode newNode = list1;
-                    list1 = list1.next;
-
-                    newNode.next = tail.next;
-                    tail.next = newNode;
-                } else {
-                    if (list2 != null) {
-                        ListNode newNode = list2;
-                        list2 = list2.next;
-
-                        newNode.next = tail.next;
-                        tail.next = newNode;
-                    }
-                }
-                tail = tail.next;
-            }
+        if(list1 == null){
+            return list2;
         }
-        return dummy.next;
+
+        if(list2 == null){
+            return list1;
+        }
+
+        ListNode head;
+
+        ListNode temp;
+
+        if(list1.val > list2.val) {
+            temp = head = new ListNode(list2.val);
+            list2 = list2.next;
+        }else{
+            temp = head = new ListNode(list1.val);
+            list1 = list1.next;
+        }
+
+        while(list1 != null || list2 != null) {
+            if(list1 == null && list2 !=null) {
+                temp.next = new ListNode(list2.val);
+                list2 = list2.next;
+            } else if (list1 != null && list2 == null) {
+                temp.next = new ListNode(list1.val);
+                list1 = list1.next;
+            } else {
+                if(list1.val > list2.val){
+                    temp.next = new ListNode(list2.val);
+                    list2 = list2.next;
+                }else{
+                    temp.next = new ListNode(list1.val);
+                    list1 = list1.next;
+                }
+            }
+            temp = temp.next;
+        }
+        return head;
     }
 }
