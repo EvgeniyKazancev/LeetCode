@@ -41,7 +41,7 @@ class Solution {
 
         while(list1 != null || list2 != null) {
             if(list1 == null && list2 !=null) {
-                temp.next = new ListNode(list2.val);
+                temp.next = new ListNode(list2.val );
                 list2 = list2.next;
             } else if (list1 != null && list2 == null) {
                 temp.next = new ListNode(list1.val);
