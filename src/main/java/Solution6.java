@@ -3,15 +3,48 @@ public class Solution6 {
 
 
         Solution6 solution6 = new Solution6();
-        String a = "1110010";
-        String b = "101010";
+        String a = "11";
+        String b = "1";
         String out = solution6.addBinary(a, b);
         System.out.println(out);
     }
 
     public String addBinary(String a, String b) {
+       ;
+        char[] aChar = a.toCharArray();
+        char[] bChar = b.toCharArray();
+        int aInt = aChar.length - 1;
+        int bInt = bChar.length - 1;
+        int result = 0;
+        StringBuilder st = new StringBuilder();
+         while (aInt >= 0 && bInt >= 0){
+             int aa = aChar[aInt] - '0';
+             int bb = bChar[bInt] - '0';
+             int sum = aa + bb + result;
+             result = sum/2;
+             st.append(sum % 2);
+            aInt--;
+            bInt--;
+         }
+         while (aInt >= 0){
+             int aa = aChar[aInt] - '0';
+             int sum = aa + result;
+             result = sum / 2 ;
+             st.append(sum % 2);
+             aInt--;
+         }
+        while (bInt >= 0){
+            int bb = bChar[bInt] - '0';
+            int sum = bb + result;
+            result = sum / 2 ;
+            st.append(sum % 2);
+            bInt--;
+        }
+        if (result != 0){
+            st.append(result);
+        }
 
-        String resInt = Integer.toBinaryString(Integer.parseInt(a, 2) + Integer.parseInt(b, 2));
-        return resInt;
+        return st.reverse().toString();
+
     }
 }
