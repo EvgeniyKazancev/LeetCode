@@ -3,8 +3,8 @@ public class Solution6 {
 
 
         Solution6 solution6 = new Solution6();
-        String a = "11";
-        String b = "1";
+        String a = "1101";
+        String b = "1001";
         String out = solution6.addBinary(a, b);
         System.out.println(out);
     }
@@ -18,8 +18,8 @@ public class Solution6 {
         int result = 0;
         StringBuilder st = new StringBuilder();
          while (aInt >= 0 && bInt >= 0){
-             int aa = aChar[aInt] - '0';
-             int bb = bChar[bInt] - '0';
+             int aa = aChar[aInt]- '0';
+             int bb = bChar[bInt]- '0';
              int sum = aa + bb + result;
              result = sum/2;
              st.append(sum % 2);
