@@ -9,7 +9,7 @@ public class Solution7 {
         if (n == 0) {
             return 0;
         }
-        if (n < 0 || n > 92) {
+        if (n < 0 || n > 92) {  // Если n будет больше то произойдет переполнение!!
 
             throw new IndexOutOfBoundsException(n);
         }
