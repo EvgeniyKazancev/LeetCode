@@ -11,3 +11,7 @@ w
 G.idea/sonarlint/issuestore/1/c/1c0d5a1b15f9bc710dcb7ca8e54febfcb31d3a10,c\d\cded7d83681cca0dcd0d04c9411ee8efe138f1f6
 L
 src/main/java/Solution6.java,6\2\625635392a88a47f6457a3403393f913caeafa6a
+O
+src/main/java/SolutionSqrt.java,8\5\85377f03023e795a42e166e424c56c3642cba968
+L
+src/main/java/Solution5.java,c\6\c603f5e07be693004aa743a9f5d06ed323f6117a
