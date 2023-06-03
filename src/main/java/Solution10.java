@@ -3,30 +3,39 @@
 public class Solution10 {
     public static void main(String[] args) {
         Solution10 sss = new Solution10();
-        String s = "ADUTE";
+        String s = "ABFCACDB";
         sss.minLength(s);
         System.out.println(sss);
     }
+
     public int minLength(String s) {
-    StringBuilder sb = new StringBuilder();
-        if(s == null || s.isEmpty()){
+
+        if (s == null || s.isEmpty()) {
             return 0;
         }
 
-        for (int i = 0; i < s.length() - 1; i++) {
-           char current = s.charAt(i);
-           char nextChar = s.charAt(i+1);
+        int result = s.length();
 
-           if (nextChar - current == 1 ){
-               char res = s.charAt(nextChar + 1);
-               sb.append(res) ;
+        // Пока строка s содержит AB или CD, продолжаем удаление подстрок
+        while (s.contains("AB") || s.contains("CD")) {
+            StringBuilder sb = new StringBuilder();
 
-           }else
-              sb.append(s.charAt(i));
+            // Проходимся по строке и удаляем все вхождения AB и CD
+            for (int i = 0; i < s.length(); i++) {
+                char c = s.charAt(i);
+
+                if (i < s.length() - 1 && (s.substring(i, i + 2).equals("AB") || s.substring(i, i + 2).equals("CD"))) {
+                    i++; // Пропускаем два символа, если это AB или CD
+                } else {
+                    sb.append(c); // Добавляем текущий символ в новую строку
+                }
+            }
+
+            // Обновляем строку s и результат
+            s = sb.toString();
+            result = Math.min(result, s.length());
         }
 
-        int length = sb.length();
-
-         return length;
+        return result;
     }
 }
