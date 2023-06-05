@@ -5,7 +5,7 @@ public class Solution10 {
         Solution10 sss = new Solution10();
         String s = "ABFCACDB";
         sss.minLength(s);
-        System.out.println(sss);
+        System.out.println(sss.toString());
     }
 
     public int minLength(String s) {
