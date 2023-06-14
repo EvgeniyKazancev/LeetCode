@@ -4,18 +4,25 @@ public class PalindromeNum {
 
 
     public boolean isPalindrome(int x) {
-         boolean palindrome = false;
-         String number = String.valueOf(x);
-
-        for (int i = 0; i < number.length(); i++) {
-            char c = number.charAt(i);
-            if (c == number.charAt(number.length() - i - 1) ){
-                palindrome = true;
-            }else {
-                palindrome = false;
-            }
+        if (x < 0){
+            return false;
         }
-        return palindrome;
+
+         if (x <= 9){
+             return true;
+         }
+         String number = String.valueOf(x);
+         int n = number.length();
+
+        for (int i = 0; i < n/2; i++) {
+
+            if (number.charAt(i) != number.charAt(n - i - 1) )
+                return false;
+        }
+            return true;
+
+
+
     }
 
 }
