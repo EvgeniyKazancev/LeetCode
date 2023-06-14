@@ -1,20 +1,15 @@
+import java.util.Arrays;
+
 public class ValidAnagram {
     public boolean isAnagram(String s, String t) {
-        boolean result = true;
-        if (s.length() == t.length()) {
 
-
-            for (int i = 0; i < s.length(); i++) {
-                char c = s.charAt(i);
-                if (t.indexOf(c) != -1) {
-                    result = true;
-                } else {
-                    result = false;
-                }
-            }
-        }else {
-            result = false;
+        if (s.length() != t.length()) {
+            return false;
         }
-        return result;
+        char[] charArrayS = s.toCharArray();
+        char[] charArrayT = t.toCharArray();
+        Arrays.sort(charArrayS);
+        Arrays.sort(charArrayT);
+        return Arrays.equals(charArrayS,charArrayT);
     }
 }
