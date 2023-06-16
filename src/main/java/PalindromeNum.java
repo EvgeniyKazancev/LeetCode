@@ -1,13 +1,10 @@
 import java.sql.Array;
 
 public class PalindromeNum {
-
-
     public boolean isPalindrome(int x) {
         if (x < 0){
             return false;
         }
-
          if (x <= 9){
              return true;
          }
@@ -21,8 +18,5 @@ public class PalindromeNum {
         }
             return true;
 
-
-
     }
-
 }
