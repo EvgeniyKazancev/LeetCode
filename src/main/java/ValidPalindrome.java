@@ -3,15 +3,15 @@ import java.util.Locale;
 public class ValidPalindrome {
     public static void main(String[] args) {
         ValidPalindrome vp = new ValidPalindrome();
-        String s = "A man, a plan, a canal: Panama";
+        String s = "SATOR AREPO TENET OPERA ROTAS";
         boolean result = vp.isPalindrome(s);
         System.out.println(result);
     }
 
     public boolean isPalindrome(String s) {
         String sl = s.toLowerCase();
-        String revers = "";
-        String reversSb = "";
+        String revers = "" ;
+        String reversSb ;
 
         if (s == " ") {
             return true;
