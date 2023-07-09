@@ -3,7 +3,7 @@ import java.util.Locale;
 public class ValidPalindrome {
     public static void main(String[] args) {
         ValidPalindrome vp = new ValidPalindrome();
-        String s = "SATOR AREPO TENET OPERA ROTAS";
+        String s = " ";
         boolean result = vp.isPalindrome(s);
         System.out.println(result);
     }
@@ -18,10 +18,7 @@ public class ValidPalindrome {
         }
         for (int i = sl.length() - 1; i > -1; i--) {
             char c = sl.charAt(i);
-            if (Character.isLetterOrDigit(c)) {
-                revers += c;
-
-            }
+            revers += c;
         }
 
         StringBuilder sb = new StringBuilder(revers);
