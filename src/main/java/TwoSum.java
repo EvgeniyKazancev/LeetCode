@@ -3,11 +3,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class TwoSum {
-    public static void main(String[] args) {
-        int[] nums = {1,3,7,9};
-        int target = 8;
-        System.out.println();
-    }
+
     public int[] twoSum(int[] nums, int target) {
 
 
