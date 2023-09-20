@@ -16,10 +16,11 @@ public class WordBreak {
         for (int i = 0; i < ch1.length(); i++) {
             r = ch1.charAt(i);
         }
-       if (ch == r){
-           return true;
-       }
-       return false;
+         if (!ch1.isEmpty()) {
+             if (ch == r) {
+                 return true;
+             }
+         }
+        return false;
     }
-
 }
