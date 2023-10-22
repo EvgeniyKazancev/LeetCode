@@ -6,7 +6,7 @@ public class Consalting {
 
 
         Consalting consalting = new Consalting();
-        String str = "weirfweifjdsffffffdssdfsde933948i";
+        String str = "yyyyyyyyuuuuyy";
         String re = consalting.counter(str);
         System.out.println(re);
     }
@@ -16,7 +16,7 @@ public class Consalting {
 
         Map<Character, Integer> count = new HashMap<>();
 
-        for (int i = 0; i < str.length() - 1; i++) {
+        for (int i = 0; i < str.length() ; i++) {
             char c = str.charAt(i);
 
             if (!count.containsKey(c)) {
