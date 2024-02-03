@@ -9,6 +9,7 @@ public class Solution8 {
         int n = 1;
         int[] arr = new int[m + n];
         solution8.merge(nums1, m, nums2, n);
+    String f = "sdfsdf";
         System.out.println(Arrays.toString(nums1));
     }
 
