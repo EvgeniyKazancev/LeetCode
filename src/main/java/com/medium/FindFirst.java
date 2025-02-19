@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class FindFirst {
     public static void main(String[] args) {
         FindFirst obj = new FindFirst();
-        int[] arr = {2, 2};
-        int target = 2;
+        int[] arr = {2, 1,3,3,5};
+        int target = 4;
         int[] ints = obj.searchRange(arr, target);
         System.out.println(Arrays.toString(ints));
     }

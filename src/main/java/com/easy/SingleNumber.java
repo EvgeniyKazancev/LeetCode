@@ -1,19 +1,18 @@
 package com.easy;
 
 public class SingleNumber {
+    public static void main(String[] args) {
+        SingleNumber singleN = new SingleNumber();
+        int[] nums = new int[]{1,1,2,2,5};
+        System.out.println(singleN.singleNumber(nums));
+    }
     public int singleNumber(int[] nums) {
-        int n = nums.length;
-        if (n == 1) {
-            return nums[0];
-        }
+        int result = 0;
         for (int num : nums) {
-
-            if (num == nums[n - 1]) {
-                return num = 0;
-            } else
-                return num;
+            result ^= num;
         }
-        return 0;
+
+        return result;
     }
 
 }
